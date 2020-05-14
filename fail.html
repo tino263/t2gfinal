@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+<title>
+{% block title %} Error {% endblock %}
+
+</title>
+
+{% block content %}
+
+ <div class= "container">
+     <br/><br/>
+   <h1>Error....</h1>
+   <br/>
+
+    {{ error_statement }}
+   
+    <form action="/form" method="POST">
+      <div class="form-group">
+
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name" name='first_name' 
+        value="{{ first_name }}">
+       
+      </div>
+      <div class="form-group">
+        
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Last Name"
+         name= 'last_name' value="{{ last_name }}">
+      </div>
+      <div class="form-group form-check">
+        <input type="text" class="form-input" id="exampleCheck1" placeholder="Email Address" 
+        name='email' value="{{ email }}">
+        
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+ </div>
+  
+  
+
+  {% endblock %}
